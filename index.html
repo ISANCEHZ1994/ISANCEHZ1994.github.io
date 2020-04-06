@@ -13,14 +13,32 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<style>
+			.column {
+			float: left;
+			width: 50%;
+			padding: 10px;
+			height: 300px; 
+			}
+			.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			}
+			.blur{
+				background-color: rgb(0,0,0); 
+				background-color: rgba(0,0,0, 0.4); 
+				font-weight: bold;
+			}
+	</style>
+	<body class="is-preload" >
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
 				<!-- Intro -->
-					<div id="intro">
-						<h1>Israel Sanchez: <br/>
+					<div id="intro" class='blur'>
+						<h1 >Israel Sanchez: <br/>
 						Frontend Developer</h1>
 						<p>A portfolio of Israel Sanchez's projects and his abilities.</p>
 						<ul class="actions">
@@ -58,20 +76,6 @@
 										I transitioned from the metal industry to pursue a career in software development, striving for both excellence and constant curiosity.
 										Having graduated from Flatiron School, I'm scrappy and ready to show the world what I got!
 										 </p>
-										 <br>
-			<style>
-					.column {
-					float: left;
-					width: 50%;
-					padding: 10px;
-					height: 300px; 
-					}
-					.row:after {
-					content: "";
-					display: table;
-					clear: both;
-					}
-			</style>
 					<section class="row">
 									<article class='column'>
 												<header> 
@@ -102,6 +106,8 @@
 												</p>
 									</article>
 					</section>
+								<br>
+								<br> 
 								<br>
 									<h2 id='Snap'> <a> Your Snap  </a></h2>
 								</header>
