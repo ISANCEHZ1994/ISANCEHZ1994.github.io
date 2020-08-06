@@ -16,17 +16,58 @@
 
 	<style>
 		.blur{
-				background-color: rgb(0,0,0); 
-				background-color: rgba(0,0,0, 0.7); 
-				font-weight: bold;
-			}
-		.column{
-			float: left;
-			width: 50%;
-			padding: 10px;
-			height: 200px; 
-			}
-		
+		background-color: rgb(0,0,0); 
+		background-color: rgba(0,0,0, 0.7); 
+		font-weight: bold;
+		}
+		.flip-card {
+		background-color: transparent;
+		width: 300px;
+		height: 300px;
+		perspective: 1000px;
+		}
+		.flip-card-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 0.6s;
+		transform-style: preserve-3d;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		}
+		.flip-card:hover .flip-card-inner {
+		transform: rotateY(180deg);
+		}
+		.flip-card-front, .flip-card-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		}
+		.flip-card-front {
+		background-color: #fafafa;
+		color: black;
+		}
+		.flip-card-back {
+		background-color: #2980b9;
+		color: white;
+		transform: rotateY(180deg);
+		text-align: center;
+		}
+		.container{
+		max-width: 960px;
+		margin: 0 auto;
+		background: #f9f9f9;
+		font-size: 24px;
+		padding: 25px;
+		}
+		.parallax{
+		background: url('images/arnold-francisca-f77Bh3inUpE-unsplash.jpg') no-repeat center;
+		background-size: cover;
+		background-attachment: fixed;
+		height: 300px;
+		}
 	</style>
 
 	<body class="is-preload">
@@ -71,43 +112,49 @@
 											I enjoy working out as well as doing photography. Moives and several series are a great way to pass the time. I try my best to tackle every obstacule with shining positivity.
 											I may be new to the industry but I'm scrappy and ready to prove what I am made of!
 											 </p>
-						<section class="row">
-										<article class='column'>
-													<header> 
-															<h3> Strong Knowledge: </h3>
-													</header>
-														<ul style='font-weight: bold; text-align: center; list-style-type:none;'>
-															<li> React(Redux/Hooks/Bootstrap) </li>
-															<li> Ruby(on Rails)</li>
-															<li> JavaScript(ES6) </li>
-															<li> Node.js </li>
-															<li> HTML5/CSS3 </li>
-															<!-- <li> Bootstrap </li> -->
-														</ul>
-										</article>
-	
-										<article class='column'>
-													<header> 
-															<h3> Experienced:  </h3>
-													</header>
-													<ul style='font-weight: bold; text-align: center; list-style-type:none;'> 
-														<li> Active Record</li>
-														<li> Sinatra </li>
-														<li> jQuery</li>
-														<li> UX/UI </li>
-														<li> PostgreSQL</li>
-														<li> Homestead/Laravel</li>
-														<li> Express </li>
-														<li> MongoDB </li>
-													</ul>
-										</article>
+						<section class="posts">
+							<article>
+									<header> 
+										<h2> Lanuages That I Have Worked With </h2>
+									</header>
+									<div class="container">
+										<div class="parallax">
+										</div>
+									</div>
+									<!-- <div class="flip-card">
+										<div class="flip-card-inner">
+										  <div class="flip-card-front">
+											<img src="images/react_image.svg" style="width:300px;height:300px;">
+										  </div>
+										  <div class="flip-card-back">
+											<h3 style="text-align: center;">React(Hooks)</h3> 
+										  </div>
+										</div>
+									  </div>
+									  <div class="flip-card">
+										<div class="flip-card-inner">
+										  <div class="flip-card-front">
+											<img src="images/ruby_image.svg" style="width:300px;height:300px;">
+										  </div>
+										  <div class="flip-card-back">
+											<h3 style="text-align: center;">Ruby</h3> 
+										  </div>
+										</div>
+									  </div> -->
+										<img src="images/react_image.svg"/> <p> React(Hooks) </p>
+										<img src="images/ruby_image.svg"/><p> Ruby(on Rails)</p>
+										<img src="images/javascript_image.svg"/><p> JavaScript(ES6) </p>
+										<p> Node.js </p>
+										<p> HTML5/CSS3 </p><p> Active Record</p>
+										<p> Sinatra </p>
+										<p> jQuery</p>
+										<p> UX/UI </p>
+										<p> PostgreSQL</p>
+										<p> Homestead/Laravel</p>
+										<p> Express </p>
+										<p> MongoDB </p>
+							</article>
 						</section>
-								<br>
-								<br> 
-								<br>
-								<br>
-								<br>
-
 								<h4> High School and Some College </h4>
 								<p>It was 2013 and I had just graduated from high school. I remember not making a big deal about it.
 									I thought to myself, "The easy part is done. Now comes the hard part - the real world." I'd be lying if I said I wasn't 
@@ -165,32 +212,25 @@
 
 				<!-- Footer -->
 				<footer id="footer">
-							<section>
-							<h4 style='text-align: center;'> For your consideration: Israel Sanchez<br/>
-									 Detail Orientated<br/>
-									 Adaptable<br/>
-									 Energetic<br/>
-								</h4>
-							<img style=' display: block;
-							margin-left: auto;
-							margin-right: auto;' src='images/81235094_2812928408730316_3275097242498760704_o.jpg' alt='Israel-Sanchez-image'/>
-								<br>
-								<selection style="text-align: center;">
-									<h4> "Success is not final, failure is not fatal: it is the courage to continue that counts." </h4>
-									<h4> Winston Churchill </h4>
-								</selection>
-								<br>
-								<selection style='text-align: center;'>
-									<h4> "Life is like riding a bicycle. To keep your balance, you must keep moving."</h4>
-									<h4> Albert Einstein </h4>
-								</selection>
-								<br>
-								<selection style='text-align: center;'>
-									<h4> "Just don't give up trying to do what you really want to do. Where there is love and inspiration, I don't think you can go wrong."</h4>
-									<h4> Ella Fitzgerald </h4>
-								</selection>
-							</section>	
-						</section>
+					<section>
+						<h2 style='text-align: center;'> Israel Sanchez <br/></h2>
+							<h3 style='text-align: center;'>Detail Orientated<br/>
+								 Adaptable<br/>
+								 Energetic<br/>
+								</h3>
+							<br>
+							<selection>
+								<img style=' display: block;
+						margin-left: auto;
+						margin-right: auto;' src='images/81235094_2812928408730316_3275097242498760704_o.jpg' alt='Israel-Sanchez-image'/>
+							</selection>
+							<br>
+							<selection style="text-align: center;">
+								<h4> "Life is like riding a bicycle. To keep your balance, you must keep moving."</h4>
+								<h4> Albert Einstein </h4>
+							</selection>
+							
+					</section>
 						<section class="split contact" id='contact'>
 								<section>
 									<img style='object-fit: fill;' src='images/mathyas-kurmann-fb7yNPbT0l8-unsplash.jpg' alt='mail_boxes' />
