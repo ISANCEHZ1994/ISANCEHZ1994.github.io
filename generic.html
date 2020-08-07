@@ -20,41 +20,6 @@
 		background-color: rgba(0,0,0, 0.7); 
 		font-weight: bold;
 		}
-		.flip-card {
-		background-color: transparent;
-		width: 300px;
-		height: 300px;
-		perspective: 1000px;
-		}
-		.flip-card-inner {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		transition: transform 0.6s;
-		transform-style: preserve-3d;
-		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-		}
-		.flip-card:hover .flip-card-inner {
-		transform: rotateY(180deg);
-		}
-		.flip-card-front, .flip-card-back {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-		}
-		.flip-card-front {
-		background-color: #fafafa;
-		color: black;
-		}
-		.flip-card-back {
-		background-color: #2980b9;
-		color: white;
-		transform: rotateY(180deg);
-		text-align: center;
-		}
 		.container{
 		max-width: 960px;
 		margin: 0 auto;
@@ -68,18 +33,29 @@
 		background-attachment: fixed;
 		height: 300px;
 		}
+		.column {
+		float: left;
+		width: 33.33%;
+		padding: 5px;
+		}
+		/* Clearfix (clear floats) */
+		.row::after {
+		content: "";
+		clear: both;
+		display: table;
+		}
+		.post{
+			padding-top: none;
+		}
 	</style>
 
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Header -->
 					<header id="header" class='blur'>
-						<a href="index.html" class="logo"> Main </a>
+						<a href="index.html" class="logo"> Back </a>
 					</header>
-
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
@@ -92,26 +68,24 @@
 								<li><a href="https://github.com/ISANCEHZ1994" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
-
 				<!-- Main -->
 					<div id="main">
 						<!-- Post -->
 							<section class="post">
-								<header class="major">
-									<!-- <span class="date">Born September 20, 1994</span> -->
-									<!-- <h1> Backstory  </h1> -->
-								</header>
-								<!-- <div class="image main"><img src="images/IMG_20200501_145509.jpg" alt="a pic here" /></div> -->
+									<header class="major">
+										<!-- <span class="date">Born September 20, 1994</span> -->
+										<!-- <h1> Backstory  </h1> -->
+									</header>
 								<article class="post featured">
 									<header class="major">
-										
-		<h1>My Passion</h1>
-			<p> is to create beautiful and functional projects that reflect my love of coding.
-				I am an energetic full stack developer looking to add value to a team-working and open cultural environment where everyone is treated equal . 
-				I transitioned from the metal industry to pursue a career in software development, striving for both excellence and constant curiosity. Some information about me; 
-				I enjoy working out as well as doing photography. Moives and several series are a great way to pass the time. I try my best to tackle every obstacule with shining positivity.
-				I may be new to the industry but I'm scrappy and ready to prove what I am made of!
-			</p>
+									<img src="images/roman-synkevych-vXInUOv1n84-unsplash.jpg" style="max-width:100%; max-height:100%;"/>	
+				<h1>My Passion</h1>
+					<p> is to create beautiful and functional projects that reflect my love of coding.
+						I am an energetic full stack developer looking to add value to a team-working and open cultural environment where everyone is treated equal . 
+						I transitioned from the metal industry to pursue a career in software development, striving for both excellence and constant curiosity. Some information about me; 
+						I enjoy working out as well as doing photography. Moives and several series are a great way to pass the time. I try my best to tackle every obstacule with shining positivity.
+						I may be new to the industry but I'm scrappy and ready to prove what I am made of!
+					</p>
 						<section class="posts">
 							<article>
 									<header> 
@@ -121,42 +95,49 @@
 										<div class="parallax">
 										</div>
 									</div>
-									<!-- <div class="flip-card">
-										<div class="flip-card-inner">
-										  <div class="flip-card-front">
-											<img src="images/react_image.svg" style="width:300px;height:300px;">
-										  </div>
-										  <div class="flip-card-back">
-											<h3 style="text-align: center;">React(Hooks)</h3> 
-										  </div>
-										</div>
-									  </div>
-									  <div class="flip-card">
-										<div class="flip-card-inner">
-										  <div class="flip-card-front">
-											<img src="images/ruby_image.svg" style="width:300px;height:300px;">
-										  </div>
-										  <div class="flip-card-back">
-											<h3 style="text-align: center;">Ruby</h3> 
-										  </div>
-										</div>
-									  </div> -->
-										<img src="images/react_image.svg"/>
-										<img src="images/ruby_image.svg"/>
-										<img src="images/ruby_on_rails_image.svg"/>
-										<img src="images/javascript_image.svg"/>
-										<img src="images/node.js_image.svg"/>
-										<img src="images/html_5_image.svg"/>
-										<!-- <img src="images/css3_image.svg"/> -->
-										<img src="images/postgresql_image.svg"/>
-										<img src="images/larvel_image.png"/>
-										<p> Sinatra </p>
-										<p> jQuery</p>
-										<p> UX/UI </p>
-										<p> PostgreSQL</p>
-										<p> Homestead/Laravel</p>
-										<p> Express </p>
-										<p> MongoDB </p>
+						<div class='row'>
+								<div class="column">
+									<img src="images/react_image.svg"/> <h3> with Hooks</h3>
+								</div>
+								<div class="column">
+									<img src="images/redux_image.png"/> <h3> with Thunk</h3>
+								</div>
+								<div class="column">
+									<img src="images/Ruby-on-rails-development.png" width="200" height="200"/>
+								</div>
+						</div>
+						<div class="row">
+							<div class="column">
+								<img src="images/javascript_image.svg"/> <h3> ES6</h3>
+							</div>
+							<div class="column">
+								<img src="images/node.js_image.svg"/> <h3>with Express</h3>
+							</div>
+							<div class="column">
+								<img src="images/MONGO-DB-logo-300x470--x.png" width="300" height="200"/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="column">
+								<img src="images/html_5_image.svg"/>
+							</div>
+							<div class="column">
+								<img src="images/css3.svg" width="300" height="210"/>
+							</div>
+							<div class="column">
+								<img src="images/larvel_image.png" height="180"/> <h3>with homestead</h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="column">
+								<img src="images/postgresql_image.svg"/>
+							</div>
+						</div>
+								<br/>
+								<br/>
+								<p> Sinatra </p>
+								<p> jQuery</p>
+								<p> UX/UI </p>
 							</article>
 						</section>
 								<h4> High School and Some College </h4>
@@ -238,7 +219,10 @@
 					</section>
 						<section class="split contact" id='contact'>
 								<section>
-									<img style='object-fit: fill;' src='images/mathyas-kurmann-fb7yNPbT0l8-unsplash.jpg' alt='mail_boxes' />
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/israel-sanchez-94132020/" class="icon brands fa-linkedin" ><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/ISANCEHZ1994" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
 								</section>
 								<section class="alt">
 									<h3>Address</h3>
